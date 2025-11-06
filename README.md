@@ -1,9 +1,12 @@
 # Ex02 Django ORM Web Application
-## Date: 20.09.2024
+## Date: 22-09-2025
 
 ## AIM
 To develop a Django application to store and retrieve data from Car Inventory Database using Object Relational Mapping(ORM).
 
+## ENTITY RELATIONSHIP DIAGRAM
+
+![alt text](<WhatsApp Image 2025-09-13 at 11.16.19 AM.jpeg>)
 
 ## DESIGN STEPS
 
@@ -20,33 +23,34 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-```
 admin.py
-
-from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-
-admin.site.register(Employee,EmployeeAdmin)
-
-models.py
-
-from django.db import models
-from django.contrib import admin
-
-class Employee(models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee")
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
-
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
 ```
+from django.contrib import admin
+from .models import Car
+# Register your models here.
+
+admin.site.register(Car)
+
+class CarAdmin(admin.ModelAdmin):
+    list_display = ['id','brand','model','year','price']
+```
+models.py
+```
+from django.db import models
+
+# Create your models here.
+class Car(models.Model):
+    id = models.IntegerField(primary_key=True)
+    brand = models.CharField(max_length=15)
+    model = models.CharField(max_length=30)
+    year = models.DateField()
+    price = models.IntegerField()
+```
+
+
 ## OUTPUT
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ae91fa47-3ea8-4cf4-8f0b-74b73b19fcda" />
-
+![alt text](<Screenshot 2025-09-22 193509.png>)
 
 ## RESULT
-Thus the program for creating a database using ORM hass been executed successfully
+Thus the program for creating a database using ORM hass been executed successfully.
