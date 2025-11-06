@@ -6,7 +6,7 @@ To develop a Django application to store and retrieve data from Car Inventory Da
 
 ## ENTITY RELATIONSHIP DIAGRAM
 
-![alt text](<WhatsApp Image 2025-09-13 at 11.16.19 AM.jpeg>)
+<img width="1037" height="557" alt="image" src="https://github.com/user-attachments/assets/8f195aaa-05e0-4759-aeb1-4b2f27b68113" />
 
 ## DESIGN STEPS
 
@@ -50,7 +50,8 @@ class Car(models.Model):
 
 ## OUTPUT
 
-![alt text](<Screenshot 2025-09-22 193509.png>)
+<img width="1035" height="608" alt="image" src="https://github.com/user-attachments/assets/aa72c714-8f22-4b8e-ae86-02f46637637f" />
+
 
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully.
